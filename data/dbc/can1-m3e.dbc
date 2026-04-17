@@ -1,0 +1,330 @@
+VERSION ""
+
+
+NS_ : 
+		NS_DESC_
+		CM_
+		BA_DEF_
+		BA_
+		VAL_
+		CAT_DEF_
+		CAT_
+		FILTER
+		BA_DEF_DEF_
+		EV_DATA_
+		ENVVAR_DATA_
+		SGTYPE_
+		SGTYPE_VAL_
+		BA_DEF_SGTYPE_
+		BA_SGTYPE_
+		SIG_TYPE_REF_
+		VAL_TABLE_
+		SIG_GROUP_
+		SIG_VALTYPE_
+		SIGTYPE_VALTYPE_
+		BO_TX_BU_
+		BA_DEF_REL_
+		BA_REL_
+		BA_DEF_DEF_REL_
+		BU_SG_REL_
+		BU_EV_REL_
+		BU_BO_REL_
+		SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+
+
+
+
+
+BO_ 566 BMS_EVCAN_F00: 8 Vector__XXX
+	SG_ HVB_Voltage : 39|16@0+ (0.1,0) [0|65535] "V" Vector__XXX
+	SG_ HVB_Current : 55|16@0+ (0.1,-300) [-300|65535] "A" Vector__XXX
+	SG_ DTC_HVB : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1084 AC_EVCAN_F01: 8 Vector__XXX
+	SG_ ACEnvTpt : 40|8@1+ (1,-40) [-40|125] "C" Vector__XXX
+	SG_ ACCabinCoolReq : 48|8@1+ (100,0) [0|4500] "W" Vector__XXX
+	SG_ DTC_AC : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1640 VCU_EVCAN_F07: 8 Vector__XXX
+	SG_ Pedal_Brk1 : 0|8@1+ (0.5,0) [0|100] "" Vector__XXX
+	SG_ Pedal_Brk2 : 8|8@1+ (0.5,0) [0|100] "" Vector__XXX
+	SG_ Pedal_Acc1 : 16|8@1+ (0.5,0) [0|100] "" Vector__XXX
+	SG_ Pedal_Acc2 : 24|8@1+ (0.5,0) [0|100] "" Vector__XXX
+	SG_ Gear_VCUSft : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+	SG_ VCUKeySta : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+	SG_ VCUBrakeLightReq : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+	SG_ HHCmd : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+	SG_ SOH_HVB : 40|8@1+ (0.5,0) [0|100] "%" Vector__XXX
+	SG_ DTC_VCU : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+	SG_ SOC_HVB_VCU : 56|8@1+ (0.5,0) [0|100] "%" Vector__XXX
+
+BO_ 587 BMS_EVCAN_F02: 8 Vector__XXX
+	SG_ CellVoltageMinNum : 23|8@0+ (1,0) [1|255] "" Vector__XXX
+	SG_ CellVoltageMinValue : 31|16@0+ (1,0) [0|65535] "mV" Vector__XXX
+	SG_ CellVoltageMaxNum : 47|8@0+ (1,0) [1|255] "" Vector__XXX
+	SG_ CellVoltageMaxValue : 55|16@0+ (1,0) [0|65535] "mV" Vector__XXX
+
+
+BO_ 826 GVCU_EVCAN_F25: 8 Vector__XXX
+	SG_ HMICurrent : 7|16@0+ (0.1,-300) [-300|65535] "A" Vector__XXX
+	SG_ HMIVoltage : 23|16@0+ (0.1,0) [0|65535] "V" Vector__XXX
+	SG_ HmiShutDownflag : 56|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1093 VCU_EVCAN_F05: 8 Vector__XXX
+	SG_ EnergyConsptAll : 0|8@1+ (1,0) [0|100] "kW" Vector__XXX
+	SG_ EnergyConsptAvg : 8|8@1+ (0.2,0) [0|255] "kWh/100km" Vector__XXX
+	SG_ EnergyConsptIns : 16|8@1+ (0.2,0) [0|255] "kWh/100km" Vector__XXX
+	SG_ EnergyConsptAC : 24|8@1+ (0.1,0) [0|6] "kW" Vector__XXX
+	SG_ EnergyConsptPCU : 32|8@1+ (1,0) [0|80] "kW" Vector__XXX
+	SG_ EnergyRegenerated : 40|8@1+ (1,0) [0|30] "kW" Vector__XXX
+
+
+BO_ 1140 VCU_EVCAN_F02: 8 Vector__XXX
+	SG_ EnergyConsptAverage : 32|8@1+ (0.2,0) [0|255] "kWh/100km" Vector__XXX
+	SG_ ChargingRemainingTime : 40|8@1+ (5,0) [0|1000] "min" Vector__XXX
+	SG_ ChargingStarted : 49|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1560 VCU_EVCAN_F09: 8 Vector__XXX
+	SG_ MileageRemaining : 55|16@0+ (1,0) [0|65535] "km" Vector__XXX
+	SG_ VCU12V : 24|8@1+ (0.1,0) [0|120] "V" Vector__XXX
+	SG_ VCU5V : 32|8@1+ (0.1,0) [0|50] "V" Vector__XXX
+	SG_ VCUCoolTpt : 8|8@1+ (1,-40) [-40|255] "" Vector__XXX
+	SG_ RegenStp : 40|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1624 VCU_EVCAN_F10: 8 Vector__XXX
+	SG_ EnergyConsumptionAverage : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+	SG_ PWM_Fan : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ PWM_Pump : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+BO_ 414 BMS_EVCAN_F07: 8 Vector__XXX
+	SG_ CellSupplier : 0|5@1+ (1,0) [1|31] "" Vector__XXX
+	SG_ BatType : 5|3@1+ (1,0) [1|7] "" Vector__XXX
+	SG_ VehType : 8|8@1+ (1,0) [1|255] "" Vector__XXX
+	SG_ ProjectCode : 16|8@1+ (1,0) [1|255] "" Vector__XXX
+	SG_ VerTyp : 28|4@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 530 PCU_EVCAN_F00: 8 Vector__XXX
+	SG_ DTC_PCU : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+	SG_ Voltage_Input_PCU : 39|8@0+ (4,0) [0|1004] "V" Vector__XXX
+	SG_ MotorSpeed : 47|16@0+ (0.25,0) [0|16063.75] "rpm" Vector__XXX
+	SG_ MotorStatus : 59|2@0+ (1,0) [0|3] "" Vector__XXX
+	SG_ MotorDirection : 61|2@0+ (1,0) [0|3] "" Vector__XXX
+	SG_ MotorDischargeStatus : 63|2@0+ (1,0) [0|3] "" Vector__XXX
+	SG_ MotorTorque : 9|10@0+ (1,0) [0|1023] "Nm" Vector__XXX
+
+BO_ 925 PCU_EVCAN_F01: 8 Vector__XXX
+	SG_ MotorTorqueLimit : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+	SG_ PCUIGBTTemperature : 24|8@1+ (1,-40) [-40|210] "C" Vector__XXX
+	SG_ MotorTemperature : 32|8@1+ (1,-40) [-40|210] "C" Vector__XXX
+	SG_ PCUTemperature : 40|8@1+ (1,-40) [-40|210] "C" Vector__XXX
+
+BO_ 810 GABS_CCAN_F01: 8 Vector__XXX
+	SG_ SpeedVehicle : 23|15@0+ (0.06,0) [0|300] "km/h" Vector__XXX
+
+BO_ 666 GICM_BCAN_F00: 8 Vector__XXX
+	SG_ MileageOdometer : 7|24@0+ (0.1,0) [0|65535] "km" Vector__XXX
+	SG_ DriverSideSeatbelt : 58|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 570 GABS_CCAN_F00: 8 Vector__XXX
+	SG_ WheelRRSpd : 11|13@0+ (0.05625,0) [0|299.98] "km/h" Vector__XXX
+	SG_ WheelRLSpd : 30|13@0+ (0.05625,0) [0|299.98] "km/h" Vector__XXX
+	SG_ WheelFRSpd : 33|13@0+ (0.05625,0) [0|299.98] "km/h" Vector__XXX
+	SG_ WheelFLSpd : 52|13@0+ (0.05625,0) [0|299.98] "km/h" Vector__XXX
+
+
+
+BO_ 926 DCC_F01: 8 Vector__XXX
+	SG_ DCCOutpLVI : 11|12@0+ (0.2,-409) [-409|410] "A" Vector__XXX
+	SG_ DCCOutpLVU : 31|8@0+ (0.1,0) [0|25.5] "V" Vector__XXX
+	SG_ DCCSysSts : 39|4@0+ (1,0) [0|10] "" Vector__XXX
+	SG_ DCCInpHVI : 35|12@0+ (0.2,-409) [-409|410] "A" Vector__XXX
+	SG_ DCCInpHVU : 53|14@0+ (0.1,0) [0|420] "V" Vector__XXX
+
+BO_ 937 GBMS_EVCAN_F04: 8 Vector__XXX
+	SG_ InsulationResistance : 55|16@0+ (0.01,0) [0|650] "MOm" Vector__XXX
+	SG_ BMSTemperature3 : 24|8@1+ (1,-40) [-40|125] "C" Vector__XXX
+
+BO_ 938 BMS_EVCAN_F10: 8 Vector__XXX
+	SG_ SOC_LBC : 0|8@1+ (0.5,0) [0|255] "%" Vector__XXX
+	SG_ HVB_WaterHeaterTpt : 40|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+	SG_ HVB_InpTpt : 48|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+	SG_ HVB_OutTpt : 56|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+
+BO_ 952 BMS_EVCAN_F06: 8 Vector__XXX
+	SG_ BMSTemperature2 : 16|8@1+ (1,-40) [-40|125] "C" Vector__XXX
+	SG_ BMSTemperature1 : 24|8@1+ (1,-40) [-40|125] "C" Vector__XXX
+	SG_ HVBMinTemperature : 48|8@1+ (1,-40) [-40|125] "C" Vector__XXX
+	SG_ HVBMaxTemperature : 56|8@1+ (1,-40) [-40|125] "C" Vector__XXX
+
+
+BO_ 1098 BMS_EVCAN_F01: 8 Vector__XXX
+	SG_ BMSTempSensorMaxNumber : 24|4@1+ (1,0) [0|15] "" Vector__XXX
+	SG_ BMSTempSensorMinNumber : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+	SG_ EnergyDischarged : 47|24@0+ (1,0) [0|30000] "Wh" Vector__XXX
+
+BO_ 1099 BMS_EVCAN_Egy: 8 Vector__XXX
+	SG_ EnergyCharged : 7|24@0+ (1,0) [0|30000] "Wh" Vector__XXX
+	SG_ AhTotalCharged : 39|32@0+ (0.01,0) [0|4294967] "Ah" Vector__XXX
+
+BO_ 1258 EC_EVCAN_F00: 8 Vector__XXX
+	SG_ CompressorVoltage : 7|16@0+ (1,0) [0|500] "V" Vector__XXX
+	SG_ CompressorPower : 23|16@0+ (1,0) [0|3000] "W" Vector__XXX
+
+BO_ 1400 BMS_EVCAN_F05: 8 Vector__XXX
+	SG_ AhCharging : 7|24@0+ (0.01,0) [0|80] "Ah" Vector__XXX
+	SG_ AhDischarging : 31|24@0+ (0.01,0) [0|80] "Ah" Vector__XXX
+
+BO_ 930 TPMS_BCAN_F01: 8 Vector__XXX
+	SG_ FLTireTemp : 0|8@1+ (1,-40) [-40|125] "C" Vector__XXX
+	SG_ FRTireTemp : 8|8@1+ (1,-40) [-40|125] "C" Vector__XXX
+	SG_ RLTireTemp : 16|8@1+ (1,-40) [-40|125] "C" Vector__XXX
+	SG_ RRTireTemp : 24|8@1+ (1,-40) [-40|125] "C" Vector__XXX
+
+BO_ 791 TPMS_BCAN_F00: 8 Vector__XXX
+	SG_ FLTirePres : 0|8@1+ (2.75,0) [0|448] "kpa" Vector__XXX
+	SG_ FRTirePres : 8|8@1+ (2.75,0) [0|448] "kpa" Vector__XXX
+	SG_ RLTirePres : 16|8@1+ (2.75,0) [0|448] "kpa" Vector__XXX
+	SG_ RRTirePres : 24|8@1+ (2.75,0) [0|448] "kpa" Vector__XXX
+
+
+
+CM_ SG_ 566 HVB_Voltage "Voltage of High voltage battery";
+CM_ SG_ 566 HVB_Current "Current of High voltage Battery";
+CM_ BO_ 566 "HV Battery Voltage, Current";
+CM_ SG_ 566 DTC_HVB "HVB Diagnostic Trouble Code";
+CM_ BO_ 587 "Cell Max, Min Voltage";
+CM_ BO_ 1084 "Air Conditioner Info";
+CM_ SG_ 1084 DTC_AC "AC Diagnostic Trouble Code";
+CM_ BO_ 1640 "SOC, SOH, Pedals, Selector";
+CM_ SG_ 1640 Pedal_Brk1 "First circuit 0~100";
+CM_ SG_ 1640 Pedal_Brk2 "Second circuit 0~100";
+CM_ SG_ 1640 Pedal_Acc1 "First circuit 0~100";
+CM_ SG_ 1640 Pedal_Acc2 "Second circuit 0~100";
+CM_ SG_ 1640 Gear_VCUSft "00:N 01:D 10:R 11:P";
+CM_ SG_ 1640 VCUKeySta "00:KEY OFF 01:KEY ON 10:KEY START";
+CM_ SG_ 1640 VCUBrakeLightReq "00: No request 01: Request to enable";
+CM_ SG_ 1640 HHCmd "Hill Hold Control 00: Off, 11: On";
+CM_ SG_ 1640 DTC_VCU "VCU Diagnostic Trouble Code";
+CM_ BO_ 826 "Battery Cur, Vol HMI Indication";
+CM_ SG_ 826 HMICurrent "Battery Current HMI Indication";
+CM_ SG_ 826 HMIVoltage "Battery Voltage HMI Indication";
+CM_ SG_ 826 HmiShutDownflag "0: No; 1: Off";
+CM_ BO_ 1093 "Energy Consumption";
+CM_ SG_ 1093 EnergyConsptAll "Total energy consumption";
+CM_ SG_ 1093 EnergyConsptAvg "Average energy consumption";
+CM_ SG_ 1093 EnergyConsptIns "Instantaneous energy consumption";
+CM_ SG_ 1093 EnergyConsptAC "Energy consumption with air conditioning on";
+CM_ SG_ 1093 EnergyConsptPCU "Energy consumption of the electric drive";
+CM_ SG_ 1093 EnergyRegenerated "Energy recovered by the energy recovery device";
+CM_ BO_ 1140 "PowerCons, Charging time";
+CM_ SG_ 1140 EnergyConsptAverage "Average power consumption";
+CM_ SG_ 1140 ChargingRemainingTime "Remaining charging time";
+CM_ SG_ 1140 ChargingStarted "0: Charging not started 1: Charging started";
+CM_ BO_ 1560 "RemKm, 12 V, 5V";
+CM_ SG_ 1560 MileageRemaining "Remaining mileage";
+CM_ SG_ 1560 VCU12V "12V power supply filtering";
+CM_ SG_ 1560 VCU5V "5V power supply filtering";
+CM_ SG_ 1560 VCUCoolTpt "VCU cooling temperature";
+CM_ SG_ 1560 RegenStp "Braking energy recovery state ratio 00: No braking energy recovery 01: Coasting braking energy recovery 10: Braking process energy recovery 11: Fault mode (none)";
+CM_ BO_ 1624 "Various VCU Parameters";
+CM_ SG_ 1624 EnergyConsumptionAverage "Average energy consumption per kilometer";
+CM_ SG_ 1624 PWM_Fan "Fan PWM";
+CM_ SG_ 1624 PWM_Pump "Water Pump PWM";
+CM_ BO_ 414 "Battery and Vehicle type";
+CM_ SG_ 414 CellSupplier "1-LISHEN  2-GUOXUAN  3-SAMSUNG  4-LG 5-BAK";
+CM_ SG_ 414 BatType "1-NCX  2-LFP";
+CM_ SG_ 414 VehType "1: iEV5 2: iEV6 3: iEV6S 4: iEV6E 5: iEV7 6: iEV7S 7: iEV6EL 8: iEV4SL 9: iEV7T LFP 10: iEV7T NCM1 11: iEV7T NCM2 12: iEV7E 13: iEV7E LongRange（iEV6ES) 14: iEV7T NCM3_148.5Ah 15: iEV6E LR 16: iEV7 LR 17: iEVA60 18: iEVS4 19:iC5/E50A 20: X811 21: E10X";
+CM_ SG_ 414 ProjectCode "56: E40X-11P101S_15.5Ah 57: E40X-40P98S_4P8";
+CM_ SG_ 414 VerTyp "0-Hardware, 1-Software";
+CM_ BO_ 530 "Power Control Unit info";
+CM_ SG_ 530 DTC_PCU "Drive motor fault code";
+CM_ SG_ 530 Voltage_Input_PCU "PCU input voltage (high voltage) value";
+CM_ SG_ 530 MotorSpeed "Actual motor speed";
+CM_ SG_ 530 MotorStatus "TM motor current status 00: Idle 01: Electric 10: Power Generation 11: Speed Regulation";
+CM_ SG_ 530 MotorDirection "TM motor current direction 00: Idle 01: Forward 10: Backward 11: Reserved";
+CM_ SG_ 530 MotorDischargeStatus "Active discharge state 00: non-discharging state 11: discharging state";
+CM_ BO_ 925 "Power Control Unit info 2";
+CM_ SG_ 925 MotorTorqueLimit "Motor torque limit";
+CM_ SG_ 925 PCUIGBTTemperature "Motor controller IGBT temperature";
+CM_ SG_ 925 MotorTemperature "Motor temperature";
+CM_ SG_ 925 PCUTemperature "Motor controller temperature";
+CM_ SG_ 810 SpeedVehicle "Vehicle speed, when invalid, send 0x7FFF";
+CM_ BO_ 666 "Total mileage & Seatbelt";
+CM_ SG_ 666 MileageOdometer "Total mileage";
+CM_ SG_ 666 DriverSideSeatbelt "Driver's seat belt status 0: Not tied 1: Tied";
+CM_ SG_ 570 WheelRRSpd "Wheel speed Rear Right";
+CM_ SG_ 570 WheelRLSpd "Wheel speed Rear Left";
+CM_ SG_ 570 WheelFRSpd "Wheel speed Front Right";
+CM_ SG_ 570 WheelFLSpd "Wheel speed Front Left";
+CM_ BO_ 926 "DCDC Status";
+CM_ SG_ 926 DCCOutpLVI "Actual DC/DC converter output LV current";
+CM_ SG_ 926 DCCOutpLVU "Actual DC/DC converter output LV voltage";
+CM_ SG_ 926 DCCSysSts "System Status of DC/DC converter 0: Standby 1: Working 2: Power limit (DCDC cannot meet the request) 3: Fault";
+CM_ SG_ 926 DCCInpHVI "DCDC current HV side";
+CM_ SG_ 926 DCCInpHVU "DCDC voltage HV side";
+CM_ BO_ 937 "Insulation resistance & BMS Temperature";
+CM_ SG_ 937 InsulationResistance "Insulation resistance";
+CM_ SG_ 937 BMSTemperature3 "No. 3 Battery Temperature sensor";
+CM_ BO_ 938 "Battery Temperature and SOC";
+CM_ SG_ 938 SOC_LBC "SOC value sent by LBC";
+CM_ SG_ 938 HVB_WaterHeaterTpt "Water heater temperature";
+CM_ SG_ 938 HVB_InpTpt "Water-cooled battery-water inlet temperature";
+CM_ SG_ 938 HVB_OutTpt "Water-cooled battery-water outlet temperature";
+CM_ BO_ 952 "Battery Temperature";
+CM_ SG_ 952 BMSTemperature2 "No. 2 Battery Temperature sensor";
+CM_ SG_ 952 BMSTemperature1 "No. 1 Battery Temperature sensor";
+CM_ SG_ 952 HVBMinTemperature "Minimum battery temperature";
+CM_ SG_ 952 HVBMaxTemperature "Maximum battery temperature";
+CM_ BO_ 1098 "BMS info";
+CM_ SG_ 1098 BMSTempSensorMaxNumber "Maximum temperature sensor number";
+CM_ SG_ 1098 BMSTempSensorMinNumber "Minimum temperature sensor number";
+CM_ SG_ 1098 EnergyDischarged "Energy released";
+CM_ BO_ 1099 "Charge energy";
+CM_ SG_ 1099 EnergyCharged "Charge Energy";
+CM_ SG_ 1099 AhTotalCharged "Accumulated charging time";
+CM_ BO_ 1258 "Compressor Voltage and Power";
+CM_ SG_ 1258 CompressorVoltage "Compressor Voltage";
+CM_ SG_ 1258 CompressorPower "Compressor Power";
+CM_ BO_ 1400 "Charging and Discharging Ah";
+CM_ SG_ 1400 AhCharging "Charging Ah";
+CM_ SG_ 1400 AhDischarging "Discharging Ah";
+CM_ BO_ 930 "Tire temperature";
+CM_ SG_ 930 FLTireTemp "Left front tire temperature";
+CM_ SG_ 930 FRTireTemp "Right front tire temperature";
+CM_ SG_ 930 RLTireTemp "Left rear tire temperature";
+CM_ SG_ 930 RRTireTemp "Right rear tire temperature";
+CM_ BO_ 791 "Tire pressure and temperature";
+CM_ SG_ 791 FLTirePres "Left front tire pressure";
+CM_ SG_ 791 FRTirePres "Right front tire pressure";
+CM_ SG_ 791 RLTirePres "Left rear tire pressure";
+CM_ SG_ 791 RRTirePres "Right rear tire pressure";
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "DatabaseCompiler" STRING ;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "DatabaseVersion" "DEMO PLUS";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "DatabaseCompiler" "";
+BA_ "ProtocolType" "J1939";
+BA_ "BusType" "CAN";
+BA_ "DatabaseCompiler" "CSS ELECTRONICS (WWW.CSSELECTRONICS.COM)";
+BA_ "DatabaseVersion" "1.0.0";
+
+
+
+
+
+

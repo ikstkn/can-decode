@@ -1,0 +1,66 @@
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    container_name: clickhouse
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    volumes:
+      - clickhouse-data:/var/lib/clickhouse
+      - ./data/output:/var/lib/clickhouse/user_files/output
+    environment:
+      - CLICKHOUSE_PASSWORD=123
+      - CLICKHOUSE_USER=default
+    healthcheck:
+      test: ["CMD", "clickhouse-client", "--query", "SELECT 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+    restart: unless-stopped
+
+  orchestrator:
+    build: ./orchestrator
+    container_name: orchestrator
+    user: "101:101"
+    volumes:
+      - ./data/input:/var/lib/clickhouse/user_files/input
+      - ./data/output:/var/lib/clickhouse/user_files/output
+      - ./data/dbc:/var/lib/clickhouse/user_files/dbc
+    environment:
+      - CLICKHOUSE_HOST=clickhouse
+      - CLICKHOUSE_PORT=9000
+      - CLICKHOUSE_USER=default
+      - CLICKHOUSE_PASSWORD=123
+      - CLICKHOUSE_DATABASE=default
+      - INPUT_DIR=/var/lib/clickhouse/user_files/input
+      - OUTPUT_DIR=/var/lib/clickhouse/user_files/output
+      - DBC_DIR=/var/lib/clickhouse/user_files/dbc
+    depends_on:
+      clickhouse:
+        condition: service_healthy
+    restart: "no"
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_INSTALL_PLUGINS=grafana-clickhouse-datasource
+    depends_on:
+      clickhouse:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  clickhouse-data:
+  grafana-data:

@@ -1,0 +1,8 @@
+Привет! Мы уже настроили проект: ClickHouse + оркестратор на Python, который декодирует MF4 в Parquet и загружает данные в MergeTree-таблицы.
+
+Сейчас хочу улучшить проект. В приложении — все актуальные файлы:
+- docker-compose.yml
+- orchestrator.py
+- requirements.txt
+- Dockerfile
+- структура проекта (structure.txt)

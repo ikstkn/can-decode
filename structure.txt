@@ -1,0 +1,27 @@
+C:\playground\
+│
+├── docker-compose.yml
+│
+├── orchestrator\
+│   ├── orchestrator.py
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   └── mdf2parquet_decode   #для Linux контейнера
+│
+├── data\
+│   ├── input\                   # MF4 файлы
+│   │   ├── processed\   # Обработанные MF4 файлы
+│   ├── output\                  # Parquet файлы
+│   └── dbc\                     # DBC файлы
+│   │   ├── can1-m3e.dbc
+│
+├── grafana\
+│   ├── provisioning\
+│   │   ├── dashboards\
+│   │   │   ├── dashboard.yaml
+│   │   │   ├── json
+│   │   ├── datasources\
+│   │   │   ├── clickhouse.yaml
+│
+├── clickhouse-data\
+├── clickhouse-config\

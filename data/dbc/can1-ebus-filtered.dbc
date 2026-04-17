@@ -1,0 +1,110 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 2348820467 B2V_stringI2_I3: 8 Vector__XXX
+ SG_ B2V_stringI3 : 20|12@1+ (1,-2000) [-2000|2095] "A" Vector__XXX
+ SG_ B2V_stringI2 : 8|12@1+ (1,-2000) [-2000|2095] "A" Vector__XXX
+
+BO_ 2417108979 B2V_CellV: 8 Vector__XXX
+ SG_ B2V_MinCellV : 32|16@1+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ B2V_MaxCellV : 0|16@1+ (0.001,0) [0|65.535] "V" Vector__XXX
+
+BO_ 2417371123 B2V_CellT: 8 Vector__XXX
+ SG_ B2V_MinCellT : 24|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ B2V_MaxCellT : 0|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+
+BO_ 2552309747 B2V_SOH: 8 Vector__XXX
+ SG_ B2V_SOH : 48|8@1+ (1,0) [0|100] "%" Vector__XXX
+
+BO_ 2552375283 B2V_Current: 8 Vector__XXX
+ SG_ B2V_CurrCT1 : 32|16@1+ (0.1,-3200) [-3200|3353.5] "A" Vector__XXX
+ SG_ B2V_TotalI : 16|16@1+ (0.1,-3200) [-3200|3353.5] "A" Vector__XXX
+
+BO_ 2552637427 B2V_Voltage: 8 Vector__XXX
+ SG_ B2V_CurrCT3 : 48|16@1+ (0.1,-3200) [-3200|3353.5] "A" Vector__XXX
+ SG_ B2V_CurrCT2 : 32|16@1+ (0.1,-3200) [-3200|3353.5] "A" Vector__XXX
+ SG_ B2V_Battery_Voltage : 0|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
+
+BO_ 2566832622 Odometer: 8 Vector__XXX
+ SG_ TotalVehicleDistance : 0|32@1+ (0.005,0) [0|1000000] "km" Vector__XXX
+
+BO_ 2566848993 Panel_Bmu: 8 Vector__XXX
+ SG_ SOC : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ BatteryCurrent_Panel : 8|16@1+ (0.1,-500) [-1000|1000] "A" Vector__XXX
+ SG_ BatteryVoltage_Panel : 24|16@1+ (0.1,0) [0|1000] "V" Vector__XXX
+
+BO_ 2566853345 Panel_System_Tx: 8 Vector__XXX
+ SG_ RangeReserve : 0|8@1+ (1,0) [0|10000] "" Vector__XXX
+ SG_ ConverterOutputCurrent : 8|16@1+ (0.1,0) [0|500] "" Vector__XXX
+ SG_ ConverterOutputVoltage : 24|16@1+ (0.1,0) [0|100] "" Vector__XXX
+
+
+
+CM_ SG_ 2348820467 B2V_stringI3 "string 3 Current CT5";
+CM_ SG_ 2552309747 B2V_SOH "SOH";
+CM_ SG_ 2552375283 B2V_CurrCT1 "Current sersor CT1";
+CM_ SG_ 2552375283 B2V_TotalI "Total Current";
+CM_ SG_ 2552637427 B2V_CurrCT3 "Current sersor CT3";
+CM_ SG_ 2552637427 B2V_CurrCT2 "Current sersor CT2";
+CM_ SG_ 2552637427 B2V_Battery_Voltage "HVB";
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "DatabaseCompiler" STRING ;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "DatabaseVersion" "DEMO PLUS";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "DatabaseCompiler" "";
+BA_ "ProtocolType" "J1939";
+BA_ "BusType" "CAN";
+BA_ "DatabaseCompiler" "CSS ELECTRONICS (WWW.CSSELECTRONICS.COM)";
+BA_ "DatabaseVersion" "1.0.0";
+BA_ "VFrameFormat" BO_ 2348820467 1;
+BA_ "VFrameFormat" BO_ 2417108979 1;
+BA_ "VFrameFormat" BO_ 2417371123 1;
+BA_ "VFrameFormat" BO_ 2552309747 1;
+BA_ "VFrameFormat" BO_ 2552375283 1;
+BA_ "VFrameFormat" BO_ 2552637427 1;
+BA_ "VFrameFormat" BO_ 2566832622 1;
+BA_ "VFrameFormat" BO_ 2566848993 1;
+BA_ "VFrameFormat" BO_ 2566853345 1;
+

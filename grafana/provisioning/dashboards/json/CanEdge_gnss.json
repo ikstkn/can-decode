@@ -1,0 +1,430 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "grafana-clickhouse-datasource",
+        "uid": "PDEE91DDB90597936"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 20,
+        "w": 11,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.4.2",
+      "targets": [
+        {
+          "builderOptions": {
+            "aggregates": [],
+            "columns": [
+              {
+                "alias": "*",
+                "custom": false,
+                "name": "*",
+                "type": "String"
+              }
+            ],
+            "database": "default",
+            "filters": [],
+            "groupBy": [],
+            "limit": 1000,
+            "meta": {},
+            "mode": "list",
+            "orderBy": [],
+            "queryType": "table",
+            "table": "tbl_BA2C94AE_CAN1_AC_EVCAN_F01"
+          },
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "PDEE91DDB90597936"
+          },
+          "editorType": "sql",
+          "format": 1,
+          "meta": {
+            "builderOptions": {
+              "aggregates": [],
+              "columns": [
+                {
+                  "alias": "*",
+                  "custom": false,
+                  "name": "*",
+                  "type": "String"
+                }
+              ],
+              "database": "default",
+              "filters": [],
+              "groupBy": [],
+              "limit": 1000,
+              "meta": {},
+              "mode": "list",
+              "orderBy": [],
+              "queryType": "table",
+              "table": "tbl_BA2C94AE_CAN1_AC_EVCAN_F01"
+            }
+          },
+          "pluginVersion": "4.14.0",
+          "queryType": "table",
+          "rawSql": "SELECT * FROM tbl_${device}_${message}",
+          "refId": "A"
+        }
+      ],
+      "title": "New panel",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-clickhouse-datasource",
+        "uid": "PDEE91DDB90597936"
+      },
+      "description": "${device}",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 20,
+        "w": 11,
+        "x": 11,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "controls": {
+          "mouseWheelZoom": true,
+          "showAttribution": true,
+          "showDebug": false,
+          "showMeasure": false,
+          "showScale": false,
+          "showZoom": true
+        },
+        "layers": [
+          {
+            "config": {
+              "showLegend": true,
+              "style": {
+                "color": {
+                  "fixed": "dark-green"
+                },
+                "opacity": 0.4,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "fixed": 5,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/marker/circle.svg",
+                  "mode": "fixed"
+                },
+                "symbolAlign": {
+                  "horizontal": "center",
+                  "vertical": "center"
+                },
+                "textConfig": {
+                  "fontSize": 12,
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "location": {
+              "mode": "auto"
+            },
+            "name": "Layer 1",
+            "tooltip": true,
+            "type": "markers"
+          }
+        ],
+        "tooltip": {
+          "mode": "details"
+        },
+        "view": {
+          "allLayers": true,
+          "id": "fit",
+          "lat": 0,
+          "lon": 0,
+          "noRepeat": false,
+          "shared": true,
+          "zoom": 15
+        }
+      },
+      "pluginVersion": "12.4.2",
+      "targets": [
+        {
+          "builderOptions": {
+            "aggregates": [],
+            "columns": [
+              {
+                "alias": "t",
+                "custom": false,
+                "name": "t",
+                "type": "DateTime64(6, 'UTC')"
+              },
+              {
+                "alias": "Latitude",
+                "custom": false,
+                "name": "Latitude",
+                "type": "Nullable(Float64)"
+              },
+              {
+                "alias": "Longitude",
+                "custom": false,
+                "name": "Longitude",
+                "type": "Nullable(Float64)"
+              }
+            ],
+            "database": "default",
+            "filters": [
+              {
+                "condition": "AND",
+                "filterType": "custom",
+                "key": "t",
+                "label": "t",
+                "operator": "WITH IN DASHBOARD TIME RANGE",
+                "type": "DateTime64(6, 'UTC')",
+                "value": "TODAY"
+              }
+            ],
+            "groupBy": [],
+            "limit": 10000,
+            "meta": {},
+            "mode": "list",
+            "orderBy": [],
+            "queryType": "table",
+            "table": "tbl_BA2C94AE_CAN9_GnssPos"
+          },
+          "editorType": "sql",
+          "format": 1,
+          "meta": {
+            "builderOptions": {
+              "aggregates": [],
+              "columns": [
+                {
+                  "alias": "t",
+                  "custom": false,
+                  "name": "t",
+                  "type": "DateTime64(6, 'UTC')"
+                },
+                {
+                  "alias": "Latitude",
+                  "custom": false,
+                  "name": "Latitude",
+                  "type": "Nullable(Float64)"
+                },
+                {
+                  "alias": "Longitude",
+                  "custom": false,
+                  "name": "Longitude",
+                  "type": "Nullable(Float64)"
+                }
+              ],
+              "database": "default",
+              "filters": [
+                {
+                  "condition": "AND",
+                  "filterType": "custom",
+                  "key": "t",
+                  "label": "t",
+                  "operator": "WITH IN DASHBOARD TIME RANGE",
+                  "type": "DateTime64(6, 'UTC')",
+                  "value": "TODAY"
+                }
+              ],
+              "groupBy": [],
+              "limit": 10000,
+              "meta": {},
+              "mode": "list",
+              "orderBy": [],
+              "queryType": "table",
+              "table": "tbl_BA2C94AE_CAN9_GnssPos"
+            }
+          },
+          "pluginVersion": "4.14.0",
+          "queryType": "table",
+          "rawSql": "SELECT t, Latitude, Longitude FROM \"default\".\"tbl_${device}_CAN9_GnssPos\" WHERE ( t >= $__fromTime AND t <= $__toTime ) LIMIT 10000",
+          "refId": "A"
+        }
+      ],
+      "title": "New panel",
+      "type": "geomap"
+    }
+  ],
+  "preload": false,
+  "schemaVersion": 42,
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allowCustomValue": false,
+        "current": {
+          "text": "BA2C94AE",
+          "value": "BA2C94AE"
+        },
+        "datasource": {
+          "type": "grafana-clickhouse-datasource",
+          "uid": "PDEE91DDB90597936"
+        },
+        "definition": "SELECT DISTINCT \n    extract(name, 'tbl_(.+?)_') AS device\nFROM system.tables\nWHERE database = 'default' AND name LIKE 'tbl_%'\n  AND device != ''\nORDER BY device",
+        "description": "",
+        "name": "device",
+        "options": [],
+        "query": "SELECT DISTINCT \n    extract(name, 'tbl_(.+?)_') AS device\nFROM system.tables\nWHERE database = 'default' AND name LIKE 'tbl_%'\n  AND device != ''\nORDER BY device",
+        "refresh": 1,
+        "regex": "",
+        "regexApplyTo": "value",
+        "type": "query"
+      },
+      {
+        "allowCustomValue": false,
+        "current": {
+          "text": "CAN1_GABS_CCAN_F01",
+          "value": "CAN1_GABS_CCAN_F01"
+        },
+        "datasource": {
+          "type": "grafana-clickhouse-datasource",
+          "uid": "PDEE91DDB90597936"
+        },
+        "definition": "SELECT DISTINCT\n    extract(name, 'tbl_.+?_(.+)$') AS message\nFROM system.tables\nWHERE database = 'default' AND name LIKE 'tbl_%'\n  AND name LIKE concat('tbl_', '$device', '_%')\nORDER BY message",
+        "name": "message",
+        "options": [],
+        "query": "SELECT DISTINCT\n    extract(name, 'tbl_.+?_(.+)$') AS message\nFROM system.tables\nWHERE database = 'default' AND name LIKE 'tbl_%'\n  AND name LIKE concat('tbl_', '$device', '_%')\nORDER BY message",
+        "refresh": 1,
+        "regex": "",
+        "regexApplyTo": "value",
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "2025-10-06T10:53:34.322Z",
+    "to": "2025-10-06T11:23:53.027Z"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "CanEdge_GNSS",
+  "uid": "adfg5l1",
+  "version": 7,
+  "weekStart": ""
+}
