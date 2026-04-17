@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7863e108-dba9-4a42-8138-111d255b22e2" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/.idea/can-decode.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clickhouse-config/config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clickhouse-config/users.d/default-user.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/dbc/can1-ebus-filtered.dbc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/dbc/can1-m3e.dbc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/dbc/can9-canedge-internal-can.dbc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grafana/provisioning/dashboards/dashboard.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grafana/provisioning/dashboards/json/CanEdge.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grafana/provisioning/dashboards/json/CanEdge_gnss.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grafana/provisioning/datasources/clickhouse.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchestrator/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchestrator/mdf2parquet_decode" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchestrator/orchestrator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchestrator/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prompt.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/structure.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
